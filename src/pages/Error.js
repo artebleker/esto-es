@@ -4,8 +4,8 @@ import Header from '../components/layout/Header'
 const Error = () => {
   return (
     <div>
-        <Header/>
-        <p>Error 404</p>
+        <Header pathName={'Error 404'}/>
+        <p>Page not found</p>
     </div>
   )
 }

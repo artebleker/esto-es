@@ -1,10 +1,22 @@
-.header-container{
-    width: 100%;
-    background-color: #E5E5E5;
+.header-container {
+  width: 100%;
+  background-color: #e5e5e5;
 }
-.header{
-    background-color: #ffff;
+.header {
+  background-color: #ffff;
 }
-.navbar{
-    background-color: #ffff;
+.navbar div {
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+}
+.main-navbar {
+  justify-content: space-between;
+}
+.other-navbar {
+  justify-content: flex-start;
+}
+.other-navbar a, .main-navbar a{
+  display: flex;
+  align-items: center;
 }

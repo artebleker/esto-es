@@ -1,4 +1,5 @@
 import React from "react";
+import './app.css'
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import MyProjects from './pages/MyProjects'
 import AddProject from './pages/AddProject'
@@ -6,7 +7,7 @@ import EditProject from './pages/EditProject'
 import Error from './pages/Error'
 function App() {
   return (
-    <div >
+    <div className="app">
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<MyProjects/>}/>

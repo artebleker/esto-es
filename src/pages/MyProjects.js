@@ -1,11 +1,13 @@
  import React from 'react'
 import Header from '../components/layout/Header'
+import ProjectTable from '../components/project_table/ProjectTable'
  
  const MyProjects = () => {
    return (
-     <div>
+     <main>
         <Header pathName={'My projects'}/>
-     </div>
+        <ProjectTable/>
+     </main>
    )
  }
  
