@@ -1,13 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import { Link } from "react-router-dom";
+import "./search.css";
 const SearchArea = () => {
   const dataContext = useContext(DataContext);
 
   const handleChange = (e) => {
     var result = e.target.value;
     dataContext.setSearchQuery(result);
-    console.log(dataContext.searchQuery)
+    console.log(dataContext.searchQuery);
   };
 
   const handleClick = () => {
@@ -25,7 +26,7 @@ const SearchArea = () => {
         id="searchArea"
         onChange={handleChange}
       />
-      <Link to={`/search-page`} onClick={() => handleClick}>
+      <Link to={`/search-page`} className="search-button" onClick={() => handleClick}>
         Search
       </Link>
     </div>
