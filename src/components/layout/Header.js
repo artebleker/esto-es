@@ -32,7 +32,7 @@ export const NavBar = (name) => {
 const Header = ({ pathName }) => {
   return (
     <div className="header-container">
-      <div className="header">
+     <div className="header">
         <Link to="/">
           <img src={logo} alt="Esto es" className="header-logo" />
         </Link>

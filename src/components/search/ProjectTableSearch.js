@@ -1,16 +1,17 @@
 import React, { useContext, useState, useEffect } from "react";
-import "./projectTable.css";
-import { testProjects, testEmployee } from "../../test/testProjects";
-import Options from "./Options";
+import { testEmployee } from "../../test/testProjects";
+import Options from "../project_table/Options";
 import { DataContext } from "../../context/DataContext";
-const ProjectTable = () => {
+const ProjectTableSearch = () => {
   const dataContext = useContext(DataContext);
 
-  const [showProjects, setShowProjects] = useState(dataContext.newProjects);
-
+  const [showProjects, setShowProjects] = useState(dataContext.seartchQuery);
+console.log(showProjects)
   useEffect(() => {
-    setShowProjects(dataContext.newProjects);
-  }, [dataContext.newProjects]);
+    let q = dataContext.newProjects.find((f)=> f.ProjectName === dataContext.seartchQuery)
+    setShowProjects(q);
+    // console.log(dataContext.seartchQuery)
+  }, []);
   
   return (
     <div className="table-container">
@@ -81,4 +82,4 @@ const ProjectTable = () => {
   );
 };
 
-export default ProjectTable;
+export default ProjectTableSearch;
